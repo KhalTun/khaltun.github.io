@@ -1,0 +1,118 @@
+html, body{
+	height: 54.3%;
+	width: 100%;
+}
+
+body{
+	/*The following code creates a fully responsive background image.*/
+	/*Location of the image*/
+	background-image: url("email.jpg");
+	/*Bg image centred vertically & horizontally at all times*/
+	background-position: center center;
+	/*Background image doesn't tile*/
+	background-repeat: no-repeat;
+	/*Bg img fixed in viewport so no movement when 
+	content height is greater than image height*/
+	background-attachment: fixed;
+	/*Bg img scales based on container size*/
+	background-size: 1120px 630px;
+	/*bg colour to be displayed while image loads*/
+	background-color: #031C38;
+}
+
+.button{
+	background-color: blue;
+	border:none;
+	border-radius: 20px 20px;
+	position: relative;
+	left: 6%;
+	top: 0.5%;
+	
+}
+
+.button:hover{
+	transform: scale(1.1);
+	transition: all 0.5s;
+}
+
+.container{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+
+@media only screen and (max-height:499px){
+
+	.container{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.button{
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		text-transform: uppercase;
+		font-family: Typewriter, Calibri, "Times New Roman";
+		font-size: 1.5em;
+	}
+
+	.button:hover{
+	background-color: #1470C7;
+	transform: none;
+	}
+
+	p{
+		display: none;
+	}
+
+	.large{
+		display: none;
+	}
+
+	.small{
+		color: white;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: Typewriter, Calibri, "Times New Roman";
+		text-align: center;
+		transition: all 1s;
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (min-height:500px){
+	p{
+	color:white;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: Typewriter, Calibri, "Times New Roman";
+	text-align: center;
+	font-size: 1em;
+
+	}
+
+	button{
+		display: flex;
+	}
+
+	.small{
+		display: none;
+	}
+
+	.large{
+		color: white;
+		text-transform: uppercase;
+		font-family: Typewriter, Calibri, "Times New Roman";
+		font-weight:bold;
+		text-align: center;
+		font-size: 1em;
+	}
+}
